@@ -16,11 +16,12 @@ function App() {
   }
 
   useEffect(()=> {
+    console.log('fetching')
     fetchMonsters()
-  })
+  }, [])
 
   const handleChange = e => {
-    setSearchField({ searchField: e.target.value })
+    setSearchField(e.target.value)
   }
 
  
@@ -34,7 +35,7 @@ function App() {
     <h1>Monsters Rolodex</h1>
       <SearchBox 
         placeholder="Search Monsters"
-        handleChange={ handleChange() }
+        handleChange={ handleChange }
       />
       <CardList monsters={ filteredMonsters } />
     </div>
