@@ -16,7 +16,6 @@ function App() {
   }
 
   useEffect(()=> {
-    console.log('fetching')
     fetchMonsters()
   }, [])
 
@@ -29,6 +28,7 @@ function App() {
     monster.name.toLowerCase()
     .includes(searchField.toLowerCase())
   )
+
 
   return (
     <div className="App">
