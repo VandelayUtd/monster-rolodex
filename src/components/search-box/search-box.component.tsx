@@ -5,7 +5,7 @@ import './search-box.style.css'
 
 type SearchBoxProps = { 
     placeholder?: string;
-    handleChange: ChangeEventHandler;
+    handleChange: (event: ChangeEventHandler<HTMLInputElement> ) => void;
 }
 
 export const SearchBox = ({ placeholder, handleChange }: SearchBoxProps) => (
